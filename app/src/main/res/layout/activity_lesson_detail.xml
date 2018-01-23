@@ -4,14 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context="com.example.cenk.derstakip.MainActivity">
-
-    <android.support.v7.widget.RecyclerView
+    tools:context="com.example.cenk.derstakip.LessonDetail">
+    <WebView
+        android:id="@+id/lesson_webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/lessons_list" />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

@@ -12,13 +12,16 @@ public class Student implements Parcelable {
     private String name;
     private String surname;
     private double number;
-    private String photoUrl;
+    private String password;
+    private String tckn;
 
-    public Student(int id, String name, String surname, double number) {
+    public Student(int id, String name, String surname, double number, String password,String tckn) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.number = number;
+        this.password=password;
+        this.tckn=tckn;
     }
 
     public int getId() {
@@ -53,6 +56,22 @@ public class Student implements Parcelable {
         this.number = number;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getTckn() {
+        return tckn;
+    }
+
+    public void setTckn(String tckn) {
+        this.tckn = tckn;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -64,6 +83,9 @@ public class Student implements Parcelable {
         dest.writeString(name);
         dest.writeString(surname);
         dest.writeDouble(number);
+        dest.writeString(password);
+        dest.writeString(tckn);
+
 
 
     }
@@ -73,6 +95,8 @@ public class Student implements Parcelable {
         name=in.readString();
         surname=in.readString();
         number=in.readDouble();
+        password=in.readString();
+        tckn=in.readString();
 
     }
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cenk.derstakip.LoginActivity"
+    android:background="@color/background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+        <ImageView
+            android:id="@+id/meb_icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/meb"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Ders Takip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/meb_icon"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimaryDark"/>
+        <EditText
+            android:id="@+id/tckn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:inputType="number"
+            android:hint="TC Kimlik No"
+            android:text="10004325877"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#4E342E"
+            android:gravity="center"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_below="@id/login_title"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tckn"
+            android:inputType="textPassword"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:text="180334"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textColor="#4E342E"
+            android:layout_marginTop="20dp"
+            android:hint="Şifre"/>
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giriş Yap"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/password"
+            android:textColor="@color/background"
+            android:background="@drawable/login_button_background"/>
+    </RelativeLayout>
+
+</RelativeLayout>

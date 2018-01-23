@@ -11,11 +11,13 @@ public class Topic implements Parcelable {
     int id;
     String name;
     String description;
+    String topicUrl;
 
-    public Topic(int id, String name, String description) {
+    public Topic(int id, String name, String description,String topicUrl) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.topicUrl=topicUrl;
     }
 
     public int getId() {
@@ -42,6 +44,14 @@ public class Topic implements Parcelable {
         this.description = description;
     }
 
+    public String getTopicUrl() {
+        return topicUrl;
+    }
+
+    public void setTopicUrl(String topicUrl) {
+        this.topicUrl = topicUrl;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -52,12 +62,14 @@ public class Topic implements Parcelable {
         dest.writeInt(id);
         dest.writeString(name);
         dest.writeString(description);
+        dest.writeString(topicUrl);
     }
 
     private Topic(Parcel in){
         id=in.readInt();
         name=in.readString();
         description=in.readString();
+        topicUrl=in.readString();
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
